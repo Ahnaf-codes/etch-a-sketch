@@ -9,25 +9,27 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<h1 id="title">Etch-a-Sketch</h1>
-		<div id="container">
-			<div id="settings" class="flex">
-				<button class="btn">Black</button>
-				<button class="btn">RGB</button>
-				<button class="btn">Eraser</button>
-				<button class="btn">Clear</button>
-				<input type="color" name="colorPicker" id="colorPicker" />
-				<input
-					type="range"
-					name="slider"
-					id="slider"
-					min="8"
-					max="64"
-					step="4"
-					value="16"
-				/>
+		<div id="wrapper">
+			<h1 id="title">Etch-a-Sketch</h1>
+			<div id="container">
+				<div id="settings" class="flex">
+					<button class="btn">Black</button>
+					<button class="btn">RGB</button>
+					<button class="btn">Eraser</button>
+					<button class="btn">Clear</button>
+					<input type="color" name="colorPicker" id="colorPicker" />
+					<input
+						type="range"
+						name="slider"
+						id="slider"
+						min="8"
+						max="64"
+						step="4"
+						value="16"
+					/>
+				</div>
+				<main id="gridContainer" class="grid"></main>
 			</div>
-			<main id="gridContainer"></main>
 		</div>
 	</body>
 </html>
