@@ -1,0 +1,36 @@
+@font-face {
+	font-family: karma;
+	src: url("fonts/karmaFuture.otf");
+}
+
+:root {
+	font-size: 62.5%;
+}
+
+body {
+	text-transform: capitalize;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	min-height: 100vh;
+	font-family: karma;
+}
+
+#wrapper {
+	overflow: auto;
+}
+
+.flex {
+	display: flex;
+}
+
+.grid {
+	display: grid;
+}
+
+h1 {
+	font-size: 6rem;
+	text-align: center;
+}
