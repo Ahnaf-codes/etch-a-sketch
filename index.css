@@ -1,10 +1,18 @@
 @font-face {
-	font-family: karma;
-	src: url("fonts/karmaFuture.otf");
+	font-family: Karma;
+	src: url("fonts/karmaSuture.otf");
 }
 
 :root {
 	font-size: 62.5%;
+	--bg: #31deac;
+	--font-color: #e22866;
+	--accent: #6a2531;
+}
+
+* {
+	padding: 0;
+	margin: 0;
 }
 
 body {
@@ -15,11 +23,14 @@ body {
 	box-sizing: border-box;
 	overflow-x: hidden;
 	min-height: 100vh;
-	font-family: karma;
+	font-family: Karma;
+	color: var(--font-color);
 }
 
 #wrapper {
 	overflow: auto;
+	background-color: var(--bg);
+	min-height: 100vh;
 }
 
 .flex {
@@ -33,4 +44,11 @@ body {
 h1 {
 	font-size: 6rem;
 	text-align: center;
+	text-shadow: 6px 5px 0 var(--accent);
+}
+
+#settings {
+	justify-content: center;
+	align-items: center;
+	margin: 2vw;
 }
