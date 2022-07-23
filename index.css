@@ -90,3 +90,17 @@ h1 {
 	align-items: center;
 	padding: 2vw;
 }
+
+#clrAndSliderContainer > * {
+	flex: 1;
+	margin: 1vw;
+}
+
+#sliderContainer {
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 1vw 2vw;
+	background-color: var(--accent);
+	border-radius: 10px;
+	border: 3px var(--font-color) solid;
+}
