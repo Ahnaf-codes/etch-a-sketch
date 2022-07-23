@@ -13,23 +13,26 @@
 			<h1 id="title">Etch-a-Sketch</h1>
 			<div id="container">
 				<div id="settings" class="flex">
-					<div id="btnContainer">
+					<div id="btnContainer" class="flex">
 						<button class="btn">Black</button>
 						<button class="btn">RGB</button>
 						<button class="btn">Eraser</button>
 						<button class="btn">Clear</button>
 					</div>
-					<input type="color" name="colorPicker" id="colorPicker" />
-					<div id="sliderContainer">
-						<input
-							type="range"
-							name="slider"
-							id="slider"
-							min="8"
-							max="64"
-							step="4"
-							value="16"
-						/>
+					<div id="clrAndSliderContainer" class="flex">
+						<input type="color" name="colorPicker" id="colorPicker" />
+						<div id="sliderContainer" class="flex">
+							<input
+								type="range"
+								name="slider"
+								id="slider"
+								min="8"
+								max="64"
+								step="4"
+								value="16"
+							/>
+							<p id="slider-text">16x16</p>
+						</div>
 					</div>
 				</div>
 				<main id="gridContainer" class="grid"></main>
