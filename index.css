@@ -92,14 +92,25 @@ h1 {
 }
 
 #clrAndSliderContainer > * {
-	flex: 1;
+	/* flex: 1; */
 	margin: 1vw;
 }
 
-/* #colorPicker {
+#colorPicker {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	width: 5vw;
+	height: 5vw;
+	border: none;
+	cursor: pointer;
+}
+
+#colorPicker::-moz-color-swatch {
+	border-radius: 50%;
 	border: 3px var(--font-color) solid;
-	border-radius: 10px;
-} */
+}
 
 #sliderContainer {
 	justify-content: space-evenly;
