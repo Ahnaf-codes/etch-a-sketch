@@ -124,3 +124,29 @@ h1 {
 #sliderText {
 	font-size: 1.6rem;
 }
+
+@media only screen and (max-width: 768px) {
+	:root {
+		font-size: 50%;
+	}
+
+	h1 {
+		font-size: 5.5rem;
+	}
+
+	#settings > div {
+		width: 80vw;
+	}
+
+	#colorPicker {
+		width: 7vw;
+		height: 7vw;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#colorPicker {
+		width: 10vw;
+		height: 10vw;
+	}
+}
