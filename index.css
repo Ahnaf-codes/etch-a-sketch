@@ -96,6 +96,11 @@ h1 {
 	margin: 1vw;
 }
 
+/* #colorPicker {
+	border: 3px var(--font-color) solid;
+	border-radius: 10px;
+} */
+
 #sliderContainer {
 	justify-content: space-evenly;
 	align-items: center;
@@ -103,4 +108,8 @@ h1 {
 	background-color: var(--accent);
 	border-radius: 10px;
 	border: 3px var(--font-color) solid;
+}
+
+#sliderText {
+	font-size: 1.6rem;
 }
