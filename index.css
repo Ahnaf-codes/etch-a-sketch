@@ -69,11 +69,11 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 2vw;
 }
 
 #settings > div {
-	width: 65vw;
+	width: 75vw;
+	max-width: 1000px;
 }
 
 #btnContainer {
@@ -88,12 +88,6 @@ h1 {
 #clrAndSliderContainer {
 	justify-content: space-evenly;
 	align-items: center;
-	padding: 2vw;
-}
-
-#clrAndSliderContainer > * {
-	/* flex: 1; */
-	margin: 1vw;
 }
 
 #colorPicker {
@@ -123,8 +117,19 @@ h1 {
 
 #sliderText {
 	font-size: 1.6rem;
+	margin-left: 1rem;
 }
 
+#gridContainer {
+	border: 3px var(--font-color) solid;
+	max-width: 1000px;
+	max-height: 1000px;
+	width: 75vw;
+	height: 75vw;
+	margin: 1vw auto;
+}
+
+/*Media Queries*/
 @media only screen and (max-width: 768px) {
 	:root {
 		font-size: 50%;
@@ -134,13 +139,23 @@ h1 {
 		font-size: 5.5rem;
 	}
 
+	#settings {
+		margin: 1vw;
+	}
+
 	#settings > div {
 		width: 80vw;
+		/* max-width: 1000px; */
 	}
 
 	#colorPicker {
 		width: 7vw;
 		height: 7vw;
+	}
+
+	#gridContainer {
+		width: 80vw;
+		height: 80vw;
 	}
 }
 
@@ -148,5 +163,9 @@ h1 {
 	#colorPicker {
 		width: 10vw;
 		height: 10vw;
+	}
+
+	#gridContainer {
+		margin: 3vw auto;
 	}
 }
