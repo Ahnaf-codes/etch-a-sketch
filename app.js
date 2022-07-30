@@ -3,6 +3,7 @@
 const slider = document.getElementById("slider");
 const sliderText = document.getElementById("sliderText");
 const grid = document.getElementById("gridContainer");
+const clear = document.getElementById("clearBtn");
 //Functions
 function setSliderText() {
 	let sliderValue = document.getElementById("slider").value;
@@ -21,7 +22,14 @@ function createGrid() {
 	grid-template-columns: repeat(${sliderValue}, 1fr);
 	grid-template-rows: repeat(${sliderValue}, 1fr);`;
 }
+
+function deleteGrid() {
+	while (grid.lastChild) {
+		grid.removeChild(grid.lastChild);
+	}
+}
 //UI Functionality
 setSliderText();
 slider.addEventListener("input", setSliderText);
+slider.addEventListener("input", deleteGrid);
 slider.addEventListener("input", createGrid);
