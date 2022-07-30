@@ -11,12 +11,13 @@ function setSliderText() {
 
 function createGrid() {
 	let sliderValue = document.getElementById("slider").value;
-	for (let i = 0; i < sliderValue; i++) {
+	const gridNumber = sliderValue * sliderValue;
+	for (let i = 0; i < gridNumber; i++) {
 		const gridItem = document.createElement("div");
 		gridItem.classList.add("gridItem");
 		grid.appendChild(gridItem);
 	}
-	gridItem.style.cssText = `
+	grid.style.cssText = `
 	grid-template-columns: repeat(${sliderValue}, 1fr);
 	grid-template-rows: repeat(${sliderValue}, 1fr);`;
 }
