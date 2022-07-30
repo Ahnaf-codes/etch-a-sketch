@@ -39,12 +39,28 @@ function selectMode() {
 	});
 }
 
+function generateRandomColor() {
+	Math.floor(Math.random() * 256);
+}
 
+function colorGrid(e) {
+	let color = document.getElementById("colorPicker").value;
+	let randomColor = generateRandomColor;
+	if (mode === "pen") {
+		e.target.style.backgroundColor = color;
+	}
+	if (mode === "rgb") {
+		e.target.style.backgroundColor = `rba(${randomColor},${randomColor},${randomColor})`;
+	}
+	if (mode === "eraser") {
+		e.target.style.backgroundColor = "#fff";
+	}
+}
 
 //UI Functionality
-setSliderText();
-createGrid();
 slider.addEventListener("input", setSliderText);
 slider.addEventListener("input", deleteGrid);
 slider.addEventListener("input", createGrid);
 selectMode();
+setSliderText();
+createGrid();
