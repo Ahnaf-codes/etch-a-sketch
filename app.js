@@ -5,6 +5,7 @@ const sliderText = document.getElementById("sliderText");
 const grid = document.getElementById("gridContainer");
 const inks = document.querySelectorAll(".colorBtn");
 const clear = document.getElementById("clearBtn");
+const colorPicker = document.getElementById("colorPicker");
 let mode = "pen";
 //Functions
 function setSliderText() {
@@ -39,28 +40,43 @@ function selectMode() {
 	});
 }
 
-function generateRandomColor() {
-	Math.floor(Math.random() * 256);
+function colorGrid() {
+	const gridItems = document.querySelectorAll(".gridItem");
+	let color = colorPicker.value;
+
+	gridItems.forEach((gridItem) => {
+		gridItem.addEventListener("mouseover", (e) => {
+			if (mode === "pen") {
+				e.target.style.backgroundColor = color;
+			}
+			if (mode === "rgb") {
+				e.target.style.backgroundColor = 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+			}
+			if (mode === "eraser") {
+				e.target.style.backgroundColor = "#fff";
+			}
+		});
+	});
+
 }
 
-function colorGrid(e) {
-	let color = document.getElementById("colorPicker").value;
-	let randomColor = generateRandomColor;
-	if (mode === "pen") {
-		e.target.style.backgroundColor = color;
-	}
-	if (mode === "rgb") {
-		e.target.style.backgroundColor = `rba(${randomColor},${randomColor},${randomColor})`;
-	}
-	if (mode === "eraser") {
-		e.target.style.backgroundColor = "#fff";
-	}
+function clearGrid() {
+	const gridItems = document.querySelectorAll(".gridItem");
+
+	gridItems.forEach((gridItem) => {
+		gridItem.style.backgroundColor = "#fff";
+	});
 }
 
 //UI Functionality
 slider.addEventListener("input", setSliderText);
 slider.addEventListener("input", deleteGrid);
 slider.addEventListener("input", createGrid);
+slider.addEventListener("input", colorGrid);
+colorPicker.addEventListener("input", colorGrid);
+clear.addEventListener("click", clearGrid);
+
 selectMode();
 setSliderText();
 createGrid();
+colorGrid();
