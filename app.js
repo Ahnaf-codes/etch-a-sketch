@@ -69,14 +69,18 @@ function clearGrid() {
 }
 
 //UI Functionality
-slider.addEventListener("input", setSliderText);
-slider.addEventListener("input", deleteGrid);
-slider.addEventListener("input", createGrid);
-slider.addEventListener("input", colorGrid);
-colorPicker.addEventListener("input", colorGrid);
-clear.addEventListener("click", clearGrid);
+function runApp() {
+	slider.addEventListener("input", setSliderText);
+	slider.addEventListener("input", deleteGrid);
+	slider.addEventListener("input", createGrid);
+	slider.addEventListener("input", colorGrid);
+	colorPicker.addEventListener("input", colorGrid);
+	clear.addEventListener("click", clearGrid);
 
-selectMode();
-setSliderText();
-createGrid();
-colorGrid();
+	selectMode();
+	setSliderText();
+	createGrid();
+	colorGrid();
+}
+
+runApp();
