@@ -45,7 +45,7 @@ function colorGrid() {
 	let color = colorPicker.value;
 
 	gridItems.forEach((gridItem) => {
-		gridItem.addEventListener("mouseover", (e) => {
+		gridItem.addEventListener("mousedown", (e) => {
 			if (mode === "pen") {
 				e.target.style.backgroundColor = color;
 			}
